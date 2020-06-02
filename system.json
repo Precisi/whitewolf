@@ -1,7 +1,7 @@
 {
-	"name": "Foundry-Whitewolf",
-	"title": "Foundry Whitewolf System",
-	"description": "A system for playing Whitewolf / Chronicles of Darkness within Foundry Virtual Tabletop.",
+	"name": "whitewolf",
+	"title": "Foundry Whitewolf System Module",
+	"description": "A Whitewolf System for sheets and some functionality for rolling.",
 	"version": "0.45",
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.0",
@@ -14,7 +14,7 @@
 	"initiative": "1d10",
 	"gridDistance": 1,
 	"gridUnits": "m",
-	"manifest": "",
-	"download": "",
-	"url": ""
+	"manifest": "https://github.com/Precisi/whitewolf/blob/master/system.json",
+	"download": "https://github.com/Precisi/whitewolf/archive/master.zip",
+	"url": "https://github.com/Precisi/whitewolf"
 }
