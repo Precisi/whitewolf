@@ -1,0 +1,951 @@
+
+
+a:hover {
+	text-shadow: 0 0 8px blue;
+}
+
+h2 {
+	font-size: 1.5em;
+	border-bottom-color: rgb(64, 86, 134);
+	font-family: inherit;
+}
+
+/* Sheet Header */
+.cod.sheet .charname {
+	height: 45px;
+	padding: 5px 0;
+	margin: 0;
+	border-bottom: 0;
+}
+.cod.sheet .charname input {
+	height: 35px;
+	width: 96%;
+	margin: 0;
+}
+
+.cod.sheet .labels .label-details {
+	height: 18px;
+	width: 19%;
+	padding: 3px 11px;
+	font-weight: 1000;
+	float: left;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .details {
+	height: 40px;
+	width: 100%;
+	padding: 3px 10px;
+	float: left;
+}
+.cod.sheet .details input {
+	width: 19%;
+	height: 28px;
+}
+
+/* Navigation Tabs */
+.cod.sheet .tabs {
+	flex: 0 0 40px;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .tabs .item {
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.cod.sheet .tabs .item.active {
+	text-decoration: underline;
+	text-shadow: none;
+}
+
+/* Content Tabs */
+.cod.sheet .sheet-body {
+	height: calc(100% - 160px);
+}
+.cod.sheet .sheet-body .tab {
+	height: 100%;
+}
+.cod.sheet .sheet-body .editor {
+	width: 100%;
+	height: 100%;
+}
+.cod.sheet .main .attribute-section {
+	display: flex;
+	margin-top: 20px;
+}
+
+.cod.sheet .main .attribute-section .attribute-column {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 50%;
+	border: 1px solid black;
+	margin: 3px;
+	padding: 3px;
+}
+
+.cod.sheet .main .attribute-section .attribute-categories {
+	font-weight: 1000;
+	margin-top: 0px;
+	width: 20%;
+	border: none;
+	/*! color: rgb(64, 86, 134); */
+}
+.cod.sheet .main .attribute-column .attribute-type {
+	height: 0px;
+	position: relative;
+	bottom: 25px;
+	font-weight: 1000;
+	color: rgb(64, 86, 134);
+}
+.cod.sheet .main .attribute-column .attribute input {
+	width: 27px;
+	height: 18px;
+	text-align: center;
+	font-family: inherit;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+.cod.sheet .main .attribute-column .attribute {
+	/*    display: flex;
+    justify-content: space-between; */
+	margin-top: 0px;
+}
+.cod.sheet .main .attribute-section .attribute-categories > span {
+	margin-top: 2.47px;
+}
+
+.cod.sheet .main .resources {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 10px;
+}
+
+.cod.sheet .main .resources .resources-type {
+	font-weight: 1000;
+	font-size: 15px;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.cod.sheet .main .resources .resources-type > span {
+	font-weight: 1000;
+	font-size: 15px;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .main .resources .circles > * {
+	margin-left: -2.15px;
+}
+
+.cod.sheet .main .extra {
+	display: flex;
+	font-weight: 1000;
+	font-size: 15px;
+	flex-grow: 1;
+	justify-content: space-evenly;
+	margin-top: 20px;
+}
+
+.cod.sheet .main .extra .conditions {
+	margin-top: -8px;
+	text-align: center;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .main .extra .aspirations {
+	margin-top: -8px;
+	text-align: center;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .main .extra > * {
+	flex-grow: 1;
+}
+
+.cod.sheet .main .extra .aspirations > input,
+.cod.sheet .main .extra .conditions > input {
+	width: 98%;
+	height: 28px;
+	margin: 1.5px;
+}
+
+.cod.sheet .main .extra2 {
+	margin: 1px;
+	margin-top: 6px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.cod.sheet .main .extra2 > * {
+	display: flex;
+}
+
+.cod.sheet .main .extra2 input {
+	width: 28px;
+	height: 28px;
+}
+
+.cod.sheet .main .extra2 .extra-value span {
+	margin-top: 6px;
+	margin-right: 5px;
+	margin-left: 5px;
+	color: rgb(64, 86, 134);
+	font-weight: 1000;
+}
+
+.cod.sheet .main .extra2 .beats .beats-square {
+	margin-left: 1px;
+	margin-top: 6.45px;
+}
+
+.cod.sheet .main .guide {
+	text-align: center;
+	margin-top: 7px;
+	color: rgb(64, 86, 134);
+	font-size: 11px;
+}
+
+.cod.sheet .main .credits {
+	text-align: center;
+	margin-top: 20px;
+	font-style: italic;
+	color: rgb(64, 86, 134);
+	font-size: 11px;
+}
+
+.cod.sheet .skills .skill-section {
+	display: flex;
+	margin-top: 20px;
+}
+
+.cod.sheet .skills .skill-section .skill-column {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 50%;
+	border: 1px solid black;
+	margin: 3px;
+	padding: 3px;
+}
+
+.cod.sheet .skills .skill-section .skill-column .skill-circles > * {
+	margin-left: -2.15px;
+}
+
+.cod.sheet .skills .skill-column .skill-type {
+	text-align: center;
+	height: 0px;
+	position: relative;
+	bottom: 25px;
+	font-weight: 1000;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .skills .skill-column .skill > input {
+	width: 27px;
+	height: 18px;
+	margin-top: 0px;
+	text-align: center;
+	font-family: inherit;
+}
+
+.cod.sheet .skills .skill-column .skill {
+	display: flex;
+	justify-content: space-between;
+}
+.cod.sheet .skills .skill-section .skill-categories > span {
+	margin-top: 2.47px;
+}
+
+.cod.sheet .skills .skill {
+	display: flex;
+}
+
+.cod.sheet .skills .special {
+	display: flex;
+	font-weight: 1000;
+	font-size: 15px;
+	flex-grow: 1;
+	justify-content: space-evenly;
+	margin-top: 20px;
+}
+
+.cod.sheet .skills .special .specializations {
+	margin-top: -8px;
+	text-align: center;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .skills .special > * {
+	flex-grow: 1;
+}
+
+.cod.sheet .skills .special .other > input,
+.cod.sheet .skills .special .specializations > input {
+	width: 98%;
+	height: 28px;
+	margin: 1.5px;
+}
+
+.cod.sheet .skills .special .other {
+	margin-top: -8px;
+	text-align: center;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .skills .other > * {
+	flex-grow: 1;
+}
+
+.cod.sheet .footer {
+	position: relative;
+	/*! bottom: -15px; */
+}
+
+.cod.sheet .main {
+	margin-bottom: 20px;
+}
+
+/*#tab-sections {
+height: 67%
+}*/
+
+.cod.sheet .guide {
+	margin-bottom: 9px;
+	text-align: center;
+	color: rgb(64, 86, 134);
+	font-size: 11px;
+}
+
+.cod.sheet .credits {
+	text-align: center;
+	font-style: italic;
+	color: rgb(64, 86, 134);
+	font-size: 11px;
+}
+
+/* Items */
+.cod.sheet .items-list {
+	list-style: none;
+	margin: 7px 0;
+	padding: 0;
+	/* height: 100%; */
+	overflow-y: auto;
+}
+
+.cod.sheet .main h2 {
+	text-align: center;
+	color: rgb(64, 86, 134);
+	font-size: 25px;
+}
+
+.cod.sheet .skills h2 {
+	text-align: center;
+	color: rgb(64, 86, 134);
+	font-size: 25px;
+}
+
+.cod.sheet .merits h2 {
+	text-align: center;
+	color: rgb(64, 86, 134);
+	font-size: 25px;
+}
+
+.cod.sheet .equipment h2 {
+	text-align: center;
+	color: rgb(64, 86, 134);
+	font-size: 25px;
+}
+
+.cod.sheet .equipment .item-header {
+	color: rgb(64, 86, 134);
+	font-size: 15px;
+	font-weight: 1000;
+}
+
+.cod.sheet .items-list .item {
+	height: 30px;
+	line-height: 24px;
+	padding: 3px 0;
+	border-bottom: 1px solid #bbb;
+}
+.cod.sheet .items-list .item img {
+	flex: 0 0 24px;
+	margin-right: 5px;
+}
+.cod.sheet .items-list .item-name {
+	margin: 0;
+}
+.cod.sheet .items-list .item-controls {
+	flex: 0 0 36px;
+}
+
+.cod.item-sheet .tabs .item.active {
+	text-decoration: underline;
+	text-shadow: none;
+}
+
+.cod.item-sheet .tabs .item {
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.cod.item-sheet .resource {
+	height: 40px;
+	width: 50%;
+	padding: 3px 10px;
+	float: left;
+}
+
+.cod.item-sheet .profile-img {
+	flex: 0 0 100px;
+	height: 100px;
+	margin-right: 10px;
+}
+
+.cod.item-sheet .sheet-body .editor {
+	width: 100%;
+	height: 100%;
+}
+
+.cod.sheet form {
+	height: 100%;
+}
+
+.cod.sheet .tab .items {
+	overflow: auto;
+	height: 88%;
+}
+
+.cod.sheet .equipment {
+	height: 94%;
+}
+
+.cod.sheet .merits {
+	height: 94%;
+}
+
+.cod.sheet .extra h2 {
+	text-align: center;
+	color: rgb(64, 86, 134);
+	font-size: 25px;
+}
+
+.cod.sheet .extra .bio1 {
+	display: flex;
+	padding: 1px 11px;
+	font-weight: 1000;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .extra .bio1 input {
+	height: 29px;
+}
+
+.cod.sheet .extra .bio1 span {
+	padding: 3px;
+}
+
+.cod.sheet .extra .bio2 {
+	padding: 6px 11px;
+	font-weight: 1000;
+	color: rgb(64, 86, 134);
+}
+
+.cod.sheet .extra .bio2title {
+	margin-bottom: 3px;
+}
+
+.cod.sheet .extra .bio2 span {
+	padding: 3px;
+}
+
+.cod.sheet .extra .bio2 input {
+	width: 100%;
+	height: 29px;
+}
+/* ------------------------  Precisi's CSS --------------------------- */
+
+/* ------------------------  Precisi's CSS --------------------------- */
+
+.actor-sheet {
+	width: 900px !important;
+}
+
+.window-app .window-header {
+    background: #00000080;
+}
+
+/* --------------- Header --------------- */
+
+.cod.sheet .window-content {
+    padding: 0px;
+    background: #ffffff;
+    margin-bottom: 1px;
+}
+
+.sheet-layout {
+	padding-left: 60px;
+	padding-right: 60px;
+	margin: -5px;
+}
+
+.mortal {
+	background: #fff url('mortal-border.jpg') top left;
+	background-repeat: repeat-y;
+	background-size: 100%;
+}
+
+.vampire {
+	background: #fff url('vampire-border.jpg') top left;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.sheet-logo {
+	background-size: 245px 100px;
+	width: 245px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mortal .sheet-logo {
+	background: url('mortal-logo.png');
+	background-repeat: no-repeat;
+}
+.vampire .sheet-logo {
+	background: url('vampire-logo.png');
+	background-repeat: no-repeat;
+}
+
+.character_pic {
+	display: block;
+	float: left;
+	width: 140px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.character_pic .profile-img {
+    width: 140px;
+    height: 120px;
+    object-fit: cover;	
+}
+
+.header-details {
+    display: block;
+    float: left;
+	width: 80%;
+}
+.character-details {
+	width: auto;
+	float: left;
+	padding-right: 15px;
+	margin-right: 5px;
+}
+
+.header-details .concept {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 100%;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.vamp-bg-block {display: none;}
+.vampire .vamp-bg-block {display: block;}
+
+/* --------------- Tab Navigation --------------- */
+
+.cod.sheet .tabs {
+	flex: 0 0 40px;
+	border-top: 1px solid #191813;
+	border-bottom: 1px solid #191813;
+	color: #fff;
+	height: 28px;
+}
+
+.mortal nav#codprimarytabs.sheet-tabs.tabs {
+	background: #5d6e8a;
+}
+.vampire nav#codprimarytabs.sheet-tabs.tabs {
+	background: #782e22;
+}
+
+.cod.sheet .tabs .item.active {
+	text-decoration: underline;
+	text-shadow: none;
+}
+
+.mortal nav#codprimarytabs.sheet-tabs.tabs .item.active {
+	color: #b0daf7;
+}
+.vampire nav#codprimarytabs.sheet-tabs.tabs .item.active {
+	color: #dadada;
+}
+
+.cod.sheet .tabs .item {
+	line-height: 28px;
+	font-weight: normal;
+}
+
+/* --------------- Display Page -- Attributes --------------- */
+/* Note: Bubbles styles are their own section */
+
+.attribute-type {
+	display: block;
+	text-align: center;
+	color: #fff;
+	padding: 5px;
+	background: #00000070;
+	margin-bottom: 10px;
+}
+
+.attribute {
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.attribute-label {
+	position: relative
+	display: block;
+	float: left;
+	width: 40%;
+	line-height: 12px;
+}
+
+.attribute-bubbles {
+	font-size: 20px;
+	line-height: 10px;
+}
+
+
+.attribute .attribute-max-bubbles:before {
+	content: '○○○○○';
+	font-size: 20px;
+    position: absolute;
+    top: -8px;
+    color: #000000;
+}
+
+.attribute .attribute-max-bubbles:after {
+	content: '●●●●●';
+	margin-left: 65px;
+	font-size: 20px;
+    position: absolute;
+    top: -8px;
+    color: #ff640080;
+}
+
+.attribute .attribute-dot {
+	width: 12px;
+    color: rgb(64, 86, 134);
+    float: left;
+    z-index: 2;
+    } 
+
+.attribute-dot:nth-child(5n+6) {border-left: 1px solid #b7b7b7; margin-left: 1px; padding-left: 2px; width: 16px;}
+
+
+
+.attribute-categories {
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	line-height: 24px;
+}
+
+.attribute-task {
+	line-height: 12px;
+	display: block;
+	padding: 1px;
+	background: #f0f0e0;
+	border: 1px solid #7a7971;
+	width: 60px;
+}
+
+.attribute_column1 {
+	display: block;
+	float: left;
+	width: 8%;
+}
+
+.attribute_column2,
+.attribute_column3,
+.attribute_column4 {
+	display: block;
+	float: left;
+	width: 30%;
+	margin-left: 1%;
+}
+
+.cod.sheet .main .attribute-section .attribute-categories {
+	width: 12%;
+}
+
+.cod.sheet .main .attribute-section .attribute-categories > span {
+	margin-top: 7px;
+}
+
+.cod.sheet .main .attribute-column .attribute {
+	display: grid;
+	grid-template-columns: 33% 53% 5%;
+	grid-gap: 5px;
+	margin-top: 0px;
+}
+
+/* --------------- Display Page -- Mid Columns --------------- */
+
+.mid_column1 {
+	display: block;
+	float: left;
+	width: 19%;
+	margin-right: 1%;
+	padding: 5px;
+}
+
+.mid_column2 {
+	display: block;
+	float: left;
+	width: 39%;
+	margin-right: 1%;
+	padding: 5px;
+}
+
+.mid_column3 {
+	display: block;
+	float: left;
+	width: 39%;
+	padding: 5px;
+}
+
+.display-skills {
+	background: #ffffff70;
+}
+
+.display-skills h3 {
+	background: #666;
+	color: #fff;
+	text-align: center;
+}
+
+.altcolor {
+	background: #00000012;
+}
+
+.display-skills .skill-column {
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin-top: 8px;
+	padding: 3px;
+	font-size: 13px;
+	line-height: 13px;
+}
+
+.cod.sheet .display-skills .skills .skill-column .skill-type {
+	display: block;
+	text-align: center;
+	font-weight: 1000;
+	color: #191813;
+	height: 20px;
+	position: relative;
+	bottom: 0px;
+}
+
+.display-disciplines,
+.display-merits {
+	float: left;
+	width: 100%;
+	padding: 5px;
+	background: #00000020;
+}
+
+.display-disciplines {
+	display: none;
+}
+.vampire .display-disciplines {
+	display: block;
+}
+
+.display-disciplines h3,
+.display-willpower h3, 
+.display-merits h3,
+.display-other h3 {
+	background: #444;
+	color: #fff;
+	text-align: center;
+}
+
+.display-willpower, .vamp_bloodpotency {
+	text-align: center;
+	border-bottom: 1px solid #000;
+	padding-bottom: 10px;
+} 
+.display-willpower h4, .vamp_bloodpotency h4 {
+	text-transform: uppercase;
+}
+
+.cod.sheet .display-disciplines .items-list .item,
+.cod.sheet .display-merits .items-list .item {
+	height: 22px;
+	font-size: 13px;
+	line-height: 22px;
+	padding: 0px 0;
+	border-bottom: 1px solid #782e2250;
+}
+
+.vamp_bloodpotency {
+	display: none;
+	line-height: 50px;
+}
+.vamp_bloodpotency input {
+	width: 10%;
+}
+.vampire .vamp_bloodpotency {
+	display: block;
+}
+
+.display-other .sheet-bubbles {
+	width: 50%;
+}
+.display-other input {
+	width: 30px;
+	font-size: 12px;
+	height: 18px;
+	margin-top: -2px;
+}
+
+.resource {
+	width: 100%;
+	margin-top: 10px;
+	float: left;
+	text-align: left;
+}
+.resource input {
+	width: 100px;
+}
+
+/* --------------- Sheet Bubbles --------------- */
+/* ●●●●●●●●●●●●●●● Sheet Bubbles ●●●●●●●●●●●●●●● */
+/* --------------- Sheet Bubbles --------------- */
+
+.attribute-bubbles {
+	font-size: 20px;
+	color: #191813;
+}
+
+.sheet-bubbles,
+.skill-bubbles,
+.sheet-squares {
+	position: relative;
+	top: -5px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.sheet-bubbles::before {
+	content: '●●●●● ‎●●●●●'; /* Insert content that looks like bullets */
+	font-size: 20px;
+	background: #191813;
+	background: linear-gradient(
+		90deg,
+		#000 var(--percent),
+		#00000020 var(--percent)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.skill-bubbles::before {
+	content: '●●●●●';
+	font-size: 20px;
+	background: #191813;
+	background: linear-gradient(
+		90deg,
+		#000 var(--percent),
+		#ffffff50 var(--percent)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.sheet-squares::before {
+	content: '■■■■■ ‎■■■■■'; /* Insert content that looks like bullets */
+	font-size: 20px;
+	background: #191813;
+	background: linear-gradient(
+		90deg,
+		rgb(100, 123, 173) var(--percent),
+		#00000020 var(--percent)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.vampire .sheet-squares::before {
+	background: linear-gradient(
+		90deg,
+		#782e22 var(--percent),
+		#00000020 var(--percent)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.display-skills .skill-bubbles {
+	top: 0px;
+}
+
+.display-skills .skill-bubbles::before {
+	content: '●●●●●';
+	font-size: 18px;
+	line-height: 13px;
+	background: linear-gradient(
+		90deg,
+		rgb(64, 86, 134) var(--percent),
+		#00000010 var(--percent)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.vampire .display-skills .skill-bubbles::before {
+	background: linear-gradient(
+		90deg,
+		#782e22 var(--percent),
+		#00000010 var(--percent)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* --------------- Edit Sheet Tabs --------------- */
+
+.cod.sheet .skills .skill-column .skill > input {
+	width: 40px;
+	height: 20px;
+	margin-top: 4px;
+	text-align: center;
+	font-family: inherit;
+}
+
+.attribute input {
+	width: 50px !important;
+	height: 20px;
+	margin-top: 4px;
+}

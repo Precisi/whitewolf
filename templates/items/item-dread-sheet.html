@@ -1,0 +1,61 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img
+			class="profile-img"
+			src="./systems/whitewolf/images/dread-symbol.png"
+			data-edit="img"
+			title="{{item.name}}"
+		/>
+		<div class="header-fields">
+			<h1 class="charname">
+				<input
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="Name"
+				/>
+			</h1>
+			<div class="resource">
+				<label>Rank</label>
+				<input
+					type="text"
+					name="data.rank.value"
+					value="{{data.rank.value}}"
+					data-dtype="Number"
+				/>
+			</div>
+		</div>
+	</header>
+
+	<!-- Tabs V2-->
+	<section id="dread-tab-sections" class="sheet-body">
+		<nav id="dread-primarytabs" class="sheet-tabs tabs">
+			<a class="item active" data-tab="attributes">{{localize "Attributes"}}</a>
+			<a class="item" data-tab="description">{{localize "Description"}}</a>
+		</nav>
+
+		<section class="content">
+			{{!-- Attributes Tab --}}
+			<div class="tab attributes" data-tab="attributes">
+				<div class="form-group">
+					<label class="label-text">{{data.reference.label}}</label>
+					<div class="input-box">
+						<input
+							class="input-text"
+							name="data.reference.value"
+							placeholder="[book] [pg(s)]"
+							value="{{data.reference.value}}"
+							data-dtype="String"
+						/>
+					</div>
+				</div>
+			</div>
+
+			{{!-- Description Tab --}}
+			<div class="tab description" data-tab="description">
+				{{editor content=data.description.value target="data.description.value"
+				button=true owner=owner editable=editable}}
+			</div>
+		</section>
+	</section>
+</form>

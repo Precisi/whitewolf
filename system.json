@@ -1,0 +1,20 @@
+{
+	"name": "Foundry-Whitewolf",
+	"title": "Foundry Whitewolf System",
+	"description": "A system for playing Whitewolf / Chronicles of Darkness within Foundry Virtual Tabletop.",
+	"version": "0.45",
+	"minimumCoreVersion": "0.6.0",
+	"compatibleCoreVersion": "0.6.0",
+	"templateVersion": 2,
+	"author": "Burning, Moo Man, Burzghash, Precisi",
+	"esmodules": ["module/cod.js"],
+	"styles": ["styles/cod.css"],
+	"packs": [],
+	"socket": false,
+	"initiative": "1d10",
+	"gridDistance": 1,
+	"gridUnits": "m",
+	"manifest": "",
+	"download": "",
+	"url": ""
+}

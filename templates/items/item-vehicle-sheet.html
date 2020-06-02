@@ -1,0 +1,112 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img
+			class="profile-img"
+			src="./systems/whitewolf/images/vehicle-symbol.png"
+			data-edit="img"
+			title="{{item.name}}"
+		/>
+		<div class="header-fields">
+			<h1 class="charname">
+				<input
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="Name"
+				/>
+			</h1>
+		</div>
+	</header>
+
+	<!-- Tabs V2-->
+	<section id="vehicle-tab-sections" class="sheet-body">
+		<nav id="vehicle-primarytabs" class="sheet-tabs tabs">
+			<a class="item active" data-tab="attributes">{{localize "Attributes"}}</a>
+			<a class="item" data-tab="description">{{localize "Description"}}</a>
+		</nav>
+
+		<section class="content">
+			{{!-- Attributes Tab --}}
+			<div class="tab attributes" data-tab="attributes">
+				<div class="form-group">
+					<label class="label-text">{{data.modifier.label}}</label>
+					<div class="input-box">
+						<input
+							class="input-text"
+							name="data.modifier.value"
+							value="{{data.modifier.value}}"
+							data-dtype="Number"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="label-text">{{data.size.label}}</label>
+					<div class="input-box">
+						<input
+							class="input-text"
+							name="data.size.value"
+							value="{{data.size.value}}"
+							data-dtype="Number"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="label-text">{{data.durability.label}}</label>
+					<div class="input-box">
+						<input
+							class="input-text"
+							name="data.durability.value"
+							value="{{data.durability.value}}"
+							data-dtype="Number"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="label-text">{{data.structure.label}}</label>
+					<div class="input-box">
+						<input
+							class="input-text"
+							name="data.structure.value"
+							value="{{data.structure.value}}"
+							data-dtype="Number"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="label-text">{{data.speed.label}}</label>
+					<div class="input-box">
+						<input
+							class="input-text"
+							name="data.speed.value"
+							value="{{data.speed.value}}"
+							data-dtype="Number"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="label-text">{{data.reference.label}}</label>
+					<div class="input-box">
+						<input
+							class="input-text"
+							name="data.reference.value"
+							placeholder="[book] [pg(s)]"
+							value="{{data.reference.value}}"
+							data-dtype="Number"
+						/>
+					</div>
+				</div>
+			</div>
+
+			{{!-- Description Tab --}}
+			<div class="tab description" data-tab="description">
+				{{editor content=data.description.value target="data.description.value"
+				button=true owner=owner editable=editable}}
+			</div>
+		</section>
+	</section>
+</form>
