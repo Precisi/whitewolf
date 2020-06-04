@@ -1,7 +1,7 @@
 <h2>Disciplines</h2>
 <div class="discipline-section">
 	<ol class="items-list">
-		{{#each actor.disciplines as |item id|}}
+		{{#each actor.data.inventory.disciplines as |item id|}}
 		<li class="item flexrow" data-item-id="{{item._id}}">
 			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
 			<h4 class="item-name">{{item.name}}</h4>

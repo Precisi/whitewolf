@@ -1,11 +1,8 @@
 <div class="display-page">
 	<div class="attribute-section">
 		<div class="attribute_column1">
-			<div class="attribute-categories">
-				<a class="att-roll-pool"
-					><div class="attribute-task">Attribute<br />Task Roll</div></a
-				>
-			</div>
+		<div class="attribute-categories">
+				<a class="att-roll-pool"><div class="attribute-task">Attribute<br />Task Roll</div></a></div>
 			<div class="attribute-categories">Power</div>
 			<div class="attribute-categories">Finesse</div>
 			<div class="attribute-categories">Resistance</div>
@@ -43,60 +40,69 @@
 
 		<div class="attribute_column3">
 			<span class="attribute-type">Physical</span>
+
 			<div class="attribute">
-				<span><a class="roll-pool" data-skill="str">Strength</a></span>
-				<label
-					class="sheet-bubbles"
-					style="--percent: calc({{data.attributes.str.value}} / 10 * 100%);"
-					>{{data.attributes.str.value}}</label
-				>
+					<div class="attribute-label"><a class="roll-pool" data-skill="str">Strength</a></div>
+					<div class="attribute-max-bubbles"></div>
+					<div class="attribute-bubbles">
+					{{#each actor.data.dots.attDots.str as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+					</div>
+					<div style="clear: both;"></div>
 			</div>
+			
 			<div class="attribute">
-				<span><a class="roll-pool" data-skill="dex">Dexterity</a></span>
-				<label
-					class="sheet-bubbles"
-					style="--percent: calc({{data.attributes.dex.value}} / 10 * 100%);"
-					>{{data.attributes.dex.value}}</label
-				>
+				<div class="attribute-label"><a class="roll-pool" data-skill="dex">Dexterity</a></div>
+				<div class="attribute-max-bubbles"></div>
+				<div class="attribute-bubbles">
+				{{#each actor.data.dots.attDots.dex as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				</div>
+				<div style="clear: both;"></div>
 			</div>
+			
 			<div class="attribute">
-				<span><a class="roll-pool" data-skill="sta">Stamina</a></span>
-				<label
-					class="sheet-bubbles"
-					style="--percent: calc({{data.attributes.sta.value}} / 10 * 100%);"
-					>{{data.attributes.sta.value}}</label
-				>
+				<div class="attribute-label"><a class="roll-pool" data-skill="sta">Stamina</a></div>
+				<div class="attribute-max-bubbles"></div>
+				<div class="attribute-bubbles">
+				{{#each actor.data.dots.attDots.sta as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				</div>
+			<div style="clear: both;"></div>
 			</div>
 		</div>
 
 		<div class="attribute_column4">
 			<span class="attribute-type">Social</span>
+			
 			<div class="attribute">
-				<span><a class="roll-pool" data-skill="pre">Presence</a></span>
-				<label
-					class="sheet-bubbles"
-					style="--percent: calc({{data.attributes.pre.value}} / 10 * 100%);"
-					>{{data.attributes.pre.value}}</label
-				>
+				<div class="attribute-label"><a class="roll-pool" data-skill="pre">Presence</a></div>
+				<div class="attribute-max-bubbles"></div>
+				<div class="attribute-bubbles">
+				{{#each actor.data.dots.attDots.pre as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				</div>
+				<div style="clear: both;"></div>
 			</div>
+
 			<div class="attribute">
-				<span><a class="roll-pool" data-skill="man">Manipulation</a></span>
-				<label
-					class="sheet-bubbles"
-					style="--percent: calc({{data.attributes.man.value}} / 10 * 100%);"
-					>{{data.attributes.man.value}}</label
-				>
+				<div class="attribute-label"><a class="roll-pool" data-skill="man">Manipulation</a></div>
+				<div class="attribute-max-bubbles"></div>
+				<div class="attribute-bubbles">
+				{{#each actor.data.dots.attDots.man as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				</div>
+				<div style="clear: both;"></div>
 			</div>
+	
 			<div class="attribute">
-				<span><a class="roll-pool" data-skill="com">Composure</a></span>
-				<label
-					class="sheet-bubbles"
-					style="--percent: calc({{data.attributes.com.value}} / 10 * 100%);"
-					>{{data.attributes.com.value}}</label
-				>
+				<div class="attribute-label"><a class="roll-pool" data-skill="com">Composure</a></div>
+				<div class="attribute-max-bubbles"></div>
+				<div class="attribute-bubbles">
+				{{#each actor.data.dots.attDots.com as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				</div>
+				<div style="clear: both;"></div>
 			</div>
+
 		</div>
 	</div>
+
+		<div style="clear: both;"></div>
 
 	<!-- Skills Column -->
 	<div class="mid_column1">
@@ -353,7 +359,7 @@
 			<h3>Disciplines</h3>
 			<div class="items">
 				<ol class="items-list">
-					{{#each actor.disciplines as |item id|}}
+					{{#each actor.data.inventory.disciplines as |item id|}}
 					<li class="item flexrow" data-item-id="{{item._id}}">
 						<h4 class="item-name">{{item.name}}</h4>
 					</li>
@@ -367,7 +373,7 @@
 			<h3>Merits</h3>
 			<div class="items">
 				<ol class="items-list">
-					{{#each actor.merits as |item id|}}
+					{{#each actor.data.inventory.merits as |item id|}}
 					<li class="item flexrow" data-item-id="{{item._id}}">
 						<h4 class="item-name">{{item.name}}</h4>
 					</li>

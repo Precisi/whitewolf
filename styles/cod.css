@@ -639,16 +639,16 @@ height: 67%
 	font-size: 20px;
     position: absolute;
     top: -8px;
-    color: #000000;
+    color: #00000040;
 }
 
 .attribute .attribute-max-bubbles:after {
-	content: '●●●●●';
+	content: '○○○○○';
 	margin-left: 65px;
 	font-size: 20px;
     position: absolute;
     top: -8px;
-    color: #ff640080;
+    color: #00000040;
 }
 
 .attribute .attribute-dot {

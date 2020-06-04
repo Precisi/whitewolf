@@ -1,7 +1,7 @@
 <h2>Merits</h2>
 <div class="merits-section">
 	<ol class="items-list">
-		{{#each actor.merits as |item id|}}
+		{{#each actor.data.inventory.merits as |item id|}}
 		<li class="item flexrow" data-item-id="{{item._id}}">
 			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
 			<h4 class="item-name">{{item.name}}</h4>
