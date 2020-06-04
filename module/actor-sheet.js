@@ -361,7 +361,7 @@ export class ActorSheetCoD extends ActorSheet {
 				groups: CONFIG.groups,
 			};
 
-			renderTemplate('systems/whitewolf/templates/pool-dialog.html', dialogData).then(
+			renderTemplate(`systems/${game.system.id}/templates/pool-dialog.html`, dialogData).then(
 				(html) => {
 					new Dialog({
 						title: 'Roll Dice Pool',
@@ -459,7 +459,7 @@ export class ActorSheetCoD extends ActorSheet {
 			} else {
 				// If no target selected, create popup dialogue
 				renderTemplate(
-					'systems/whitewolf/templates/pool-dialog.html',
+					`systems/${game.system.id}/templates/pool-dialog.html`,
 					dialogData
 				).then((html) => {
 					new Dialog({
@@ -512,7 +512,7 @@ export class ActorSheetCoD extends ActorSheet {
 			};
 
 			renderTemplate(
-				'systems/whitewolf/templates/att-pool-dialog.html',
+				`systems/${game.system.id}/templates/att-pool-dialog.html`,
 				dialogData
 			).then((html) => {
 				new Dialog({
@@ -608,7 +608,7 @@ export class ActorSheetCoD extends ActorSheet {
 			let dialogData = {
 				defaultSelection: defaultSelection,
 			};
-			renderTemplate('systems/whitewolf/templates/del-confirm.html', dialogData).then(
+			renderTemplate(`systems/${game.system.id}/templates/del-confirm.html`, dialogData).then(
 				(html) => {
 					new Dialog({
 						title: 'Confirm deletion',

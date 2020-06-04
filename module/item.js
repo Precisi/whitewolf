@@ -83,7 +83,7 @@ export class CoDItem extends Item {
 			} else {
 				// If no target selected, create popup dialogue
 				renderTemplate(
-					'systems/whitewolf/templates/pool-dialog.html',
+					`systems/${game.system.id}/templates/pool-dialog.html`,
 					dialogData
 				).then((html) => {
 					new Dialog({

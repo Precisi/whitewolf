@@ -16,7 +16,7 @@ export class CoDItemSheet extends ItemSheet {
 			},
 		];
 		options.classes = options.classes.concat(['cod', 'item-sheet']);
-		options.template = 'systems/whitewolf/templates/items/item-sheet.html';
+		options.template = `systems/${game.system.id}/templates/items/item-sheet.html`;
 		options.height = 450;
 		return options;
 	}
@@ -25,7 +25,7 @@ export class CoDItemSheet extends ItemSheet {
 
 	get template() {
 		let type = this.item.type;
-		return `systems/whitewolf/templates/items/item-${type}-sheet.html`;
+		return `systems/${game.system.id}/templates/items/item-${type}-sheet.html`;
 	}
 
 	getData() {
