@@ -12,7 +12,7 @@ export class ActorSheetCoD extends ActorSheet {
 			{navSelector: '.tabs', contentSelector: '.content', initial: 'display'},
 		];
 		options.classes = options.classes.concat(['cod', 'mortal', 'actor-sheet']);
-		options.template = 'systems/whitewolf/templates/actor/actor-sheet.html';
+		options.template = `systems/${game.system.id}/templates/actor/actor-sheet.html`;
 		options.width = 610;
 		options.height = 610;
 		return options;

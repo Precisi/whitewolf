@@ -37,14 +37,14 @@ Hooks.once('init', async function () {
 	Items.registerSheet('core', CoDItemSheet, {types: [], makeDefault: true});
 
 	loadTemplates([
-		'systems/whitewolf/templates/actor/actor-disciplines.html',
-		'systems/whitewolf/templates/actor/actor-display.html',
-		'systems/whitewolf/templates/actor/actor-equipment.html',
-		'systems/whitewolf/templates/actor/actor-extra.html',
-		'systems/whitewolf/templates/actor/actor-main.html',
-		'systems/whitewolf/templates/actor/actor-merits.html',
-		'systems/whitewolf/templates/actor/actor-rolls.html',
-		'systems/whitewolf/templates/actor/actor-skills.html',
+		`systems/${game.system.id}/templates/actor/actor-disciplines.html`,
+		`systems/${game.system.id}/templates/actor/actor-display.html`,
+		`systems/${game.system.id}/templates/actor/actor-equipment.html`,
+		`systems/${game.system.id}/templates/actor/actor-extra.html`,
+		`systems/${game.system.id}/templates/actor/actor-main.html`,
+		`systems/${game.system.id}/templates/actor/actor-merits.html`,
+		`systems/${game.system.id}/templates/actor/actor-rolls.html`,
+		`systems/${game.system.id}/templates/actor/actor-skills.html`,
 	]);
 });
 

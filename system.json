@@ -6,7 +6,7 @@
 	"minimumCoreVersion": "0.6.0",
 	"compatibleCoreVersion": "0.6.0",
 	"templateVersion": 2,
-	"author": "Burning, Moo Man, Burzghash, Precisi",
+	"author": "Burning, Moo Man, Burzghash, Precisi, Ashenfalke",
 	"esmodules": ["module/cod.js"],
 	"styles": ["styles/cod.css"],
 	"packs": [],
