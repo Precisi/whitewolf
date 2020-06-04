@@ -43,26 +43,26 @@
 			</nav>
 
 			<section class="content">
-				<div class="tab main" data-tab="display">
-					{{> systems/whitewolf/templates/actor/actor-display.html }}
+				<div class="tab {{tabs.display.class}}" data-tab="{{tabs.display.data}}">
+					{{> (tabs.display.template) }}
 				</div>
-				<div class="tab main" data-tab="main">
-					{{> systems/whitewolf/templates/actor/actor-main.html }}
+				<div class="tab {{tabs.main.class}}" data-tab="{{tabs.main.data}}">
+					{{> (tabs.main.template) }}
 				</div>
-				<div class="tab disciplines" data-tab="disciplines">
-					{{> systems/whitewolf/templates/actor/actor-disciplines.html }}
+				<div class="tab {{tabs.disciplines.class}}" data-tab="{{tabs.disciplines.data}}">
+					{{> (tabs.disciplines.template) }}
 				</div>
-				<div class="tab merits" data-tab="merits">
-					{{> systems/whitewolf/templates/actor/actor-merits.html }}
+				<div class="tab {{tabs.merits.class}}" data-tab="{{tabs.merits.data}}">
+					{{> (tabs.merits.template) }}
 				</div>
-				<div class="tab equipment" data-tab="equipment">
-					{{> systems/whitewolf/templates/actor/actor-equipment.html }}
+				<div class="tab {{tabs.equipment.class}}" data-tab="{{tabs.equipment.data}}">
+					{{> (tabs.equipment.template) }}
 				</div>
-				<div class="tab customrolls" data-tab="customrolls">
-					{{> systems/whitewolf/templates/actor/actor-rolls.html }}
+				<div class="tab {{tabs.rolls.class}}" data-tab="{{tabs.rolls.data}}">
+					{{> (tabs.rolls.template) }}
 				</div>
-				<div class="tab extra" data-tab="extra">
-					{{> systems/whitewolf/templates/actor/actor-extra.html }}
+				<div class="tab {{tabs.extra.class}}" data-tab="{{tabs.extra.data}}">
+					{{> (tabs.extra.template) }}
 				</div>
 			</section>
 		</section>

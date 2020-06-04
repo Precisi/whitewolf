@@ -12,7 +12,7 @@ export class ActorSheetCoD extends ActorSheet {
 			{navSelector: '.tabs', contentSelector: '.content', initial: 'display'},
 		];
 		options.classes = options.classes.concat(['cod', 'mortal', 'actor-sheet']);
-		options.template = 'systems/whitewolf/templates/actor/actor-sheet.html';
+		options.template = `systems/${game.system.id}/templates/actor/actor-sheet.html`;
 		options.width = 610;
 		options.height = 610;
 		return options;
@@ -33,6 +33,45 @@ export class ActorSheetCoD extends ActorSheet {
 
 		// Provide splat info to sheet
 		data.splats = CONFIG.splats;
+
+		// Prep tabs
+		data.tabs = {
+			display: {
+				data: 'display',
+				class: 'main',
+				template: () => `systems/${game.system.id}/templates/actor/actor-display.html`
+			},
+			main: {
+				data: 'main',
+				class: 'main',
+				template: () => `systems/${game.system.id}/templates/actor/actor-main.html`
+			},
+			disciplines: {
+				data: 'disciplines',
+				class: 'disciplines',
+				template: () => `systems/${game.system.id}/templates/actor/actor-disciplines.html`
+			},
+			merits:{
+				data: 'merits',
+				class: 'merits',
+				template: () => `systems/${game.system.id}/templates/actor/actor-merits.html`
+			},
+			equipment:{
+				data: 'equipment',
+				class: 'equipment',
+				template: () => `systems/${game.system.id}/templates/actor/actor-equipment.html`
+			},
+			rolls:{
+				data: 'customrolls',
+				class: 'customrolls',
+				template: () => `systems/${game.system.id}/templates/actor/actor-rolls.html`
+			},
+			extra:{
+				data: 'extra',
+				class: 'extra',
+				template: () => `systems/${game.system.id}/templates/actor/actor-extra.html`
+			}
+		};
 
 		//Output current status
 		console.log(`Current state of data.actor:`);
@@ -322,7 +361,7 @@ export class ActorSheetCoD extends ActorSheet {
 				groups: CONFIG.groups,
 			};
 
-			renderTemplate('systems/whitewolf/templates/pool-dialog.html', dialogData).then(
+			renderTemplate(`systems/${game.system.id}/templates/pool-dialog.html`, dialogData).then(
 				(html) => {
 					new Dialog({
 						title: 'Roll Dice Pool',
@@ -420,7 +459,7 @@ export class ActorSheetCoD extends ActorSheet {
 			} else {
 				// If no target selected, create popup dialogue
 				renderTemplate(
-					'systems/whitewolf/templates/pool-dialog.html',
+					`systems/${game.system.id}/templates/pool-dialog.html`,
 					dialogData
 				).then((html) => {
 					new Dialog({
@@ -473,7 +512,7 @@ export class ActorSheetCoD extends ActorSheet {
 			};
 
 			renderTemplate(
-				'systems/whitewolf/templates/att-pool-dialog.html',
+				`systems/${game.system.id}/templates/att-pool-dialog.html`,
 				dialogData
 			).then((html) => {
 				new Dialog({
@@ -569,7 +608,7 @@ export class ActorSheetCoD extends ActorSheet {
 			let dialogData = {
 				defaultSelection: defaultSelection,
 			};
-			renderTemplate('systems/whitewolf/templates/del-confirm.html', dialogData).then(
+			renderTemplate(`systems/${game.system.id}/templates/del-confirm.html`, dialogData).then(
 				(html) => {
 					new Dialog({
 						title: 'Confirm deletion',
