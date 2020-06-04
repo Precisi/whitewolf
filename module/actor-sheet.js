@@ -34,6 +34,45 @@ export class ActorSheetCoD extends ActorSheet {
 		// Provide splat info to sheet
 		data.splats = CONFIG.splats;
 
+		// Prep tabs
+		data.tabs = {
+			display: {
+				data: 'display',
+				class: 'main',
+				template: () => `systems/${game.system.id}/templates/actor/actor-display.html`
+			},
+			main: {
+				data: 'main',
+				class: 'main',
+				template: () => `systems/${game.system.id}/templates/actor/actor-main.html`
+			},
+			disciplines: {
+				data: 'disciplines',
+				class: 'disciplines',
+				template: () => `systems/${game.system.id}/templates/actor/actor-disciplines.html`
+			},
+			merits:{
+				data: 'merits',
+				class: 'merits',
+				template: () => `systems/${game.system.id}/templates/actor/actor-merits.html`
+			},
+			equipment:{
+				data: 'equipment',
+				class: 'equipment',
+				template: () => `systems/${game.system.id}/templates/actor/actor-equipment.html`
+			},
+			rolls:{
+				data: 'customrolls',
+				class: 'customrolls',
+				template: () => `systems/${game.system.id}/templates/actor/actor-rolls.html`
+			},
+			extra:{
+				data: 'extra',
+				class: 'extra',
+				template: () => `systems/${game.system.id}/templates/actor/actor-extra.html`
+			}
+		};
+
 		//Output current status
 		console.log(`Current state of data.actor:`);
 		console.log(data.actor);
