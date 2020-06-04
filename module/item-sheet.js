@@ -17,6 +17,7 @@ export class CoDItemSheet extends ItemSheet {
 		];
 		options.classes = options.classes.concat(['cod', 'item-sheet']);
 		options.template = `systems/${game.system.id}/templates/items/item-sheet.html`;
+		options.system_path = `systems/${game.system.id}`;
 		options.height = 450;
 		return options;
 	}
