@@ -58,8 +58,8 @@ Hooks.once('init', async function () {
 		}
 		return accum;
 	});
-	Handlebars.registerHelper('ifLessThan', (x, y, orEqual, options) => {
-		return (orEqual ? (x <= y) : (x < y)) ? options.fn() : options.inverse();
+	Handlebars.registerHelper('ifLessThan', (x, y, options) => {
+		return (x < y) ? options.fn() : options.inverse();
 	});
 });
 
