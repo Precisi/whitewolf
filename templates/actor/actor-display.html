@@ -256,9 +256,7 @@
 				<div class="skill-column">
 					<span class="skill-type">Social (-1 unskilled)</span>
 					<div class="skill">
-						<span
-							><a class="roll-pool" data-skill="animalken">Animal Ken</a></span
-						>
+						<span><a class="roll-pool" data-skill="animalken">Animal Ken</a></span>
 						<span
 							class="skill-bubbles"
 							style="--percent: calc({{data.skills.animalken.value}} / 5 * 100%);"
@@ -274,9 +272,7 @@
 						>
 					</div>
 					<div class="skill">
-						<span
-							><a class="roll-pool" data-skill="expression">Expression</a></span
-						>
+						<span><a class="roll-pool" data-skill="expression">Expression</a></span>
 						<span
 							class="skill-bubbles"
 							style="--percent: calc({{data.skills.expression.value}} / 5 * 100%);"
@@ -342,11 +338,11 @@
 				<div class="specializations-title">
 					<span>Specializations</span>
 				</div>
-				<span
-					>{{data.details.specialties.specialty1.value}},
+				<span>
+					{{data.details.specialties.specialty1.value}},
 					{{data.details.specialties.specialty2.value}},
-					{{data.details.specialties.specialty3.value}}</span
-				>
+					{{data.details.specialties.specialty3.value}}
+				</span>
 			</div>
 		</div>
 	</div>
@@ -405,8 +401,12 @@
 			<div style="clear: both;"></div>
 			
 			<div class="resource">
-				<label>Blood Pool</label>
-
+				<h3>Blood Pool</h3>
+				<div class="resource">
+					{{#repeat data.power.max}}
+					{{#ifLessThan @index ../data.power.value}}<span>🔴</span>{{else}}<span>⚫</span>{{/ifLessThan}}
+					{{/repeat}}
+				</div>
 				<input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number" />
 				<span> / </span>
 				<input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number" />
