@@ -46,6 +46,21 @@ Hooks.once('init', async function () {
 		`systems/${game.system.id}/templates/actor/actor-rolls.html`,
 		`systems/${game.system.id}/templates/actor/actor-skills.html`,
 	]);
+
+	/**
+	 * Register Handlebars helpers
+	 */
+	Handlebars.registerHelper('repeat', (n, block) => {
+		var accum = '';
+		for(var i = 0; i < n; i++) {
+			block.data.index = i;
+			accum += block.fn(this);
+		}
+		return accum;
+	});
+	Handlebars.registerHelper('ifLessThan', (x, y, orEqual, options) => {
+		return (orEqual ? (x <= y) : (x < y)) ? options.fn() : options.inverse();
+	});
 });
 
 Hooks.once('ready', async function () {
