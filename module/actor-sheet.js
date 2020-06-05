@@ -285,63 +285,7 @@ export class ActorSheetCoD extends ActorSheet {
 		}
 	}
 
-	/*
-	// Set up dot strings (String method)
-	_configureHPDots(actorData) {
-		actorData.hpMaxDots = '';
-		actorData.hpCurrentDots = '';
-
-		for (let i = 0; i < actorData.advantages.hp.max; i++) {
-			actorData.hpMaxDots += '<li>O</li>';
-		}
-
-		for (let i = 0; i < actorData.advantages.hp.value; i++) {
-			actorData.hpCurrentDots += '<li>O</li>';
-		}
-	}
-
-	_configureWPDots(actorData) {
-		actorData.wpMaxDots = '';
-		actorData.wpCurrentDots = '';
-
-		for (let i = 0; i < actorData.advantages.wp.max; i++) {
-			actorData.wpMaxDots += '<li>O</li>';
-		}
-
-		for (let i = 0; i < actorData.advantages.wp.value; i++) {
-			actorData.wpCurrentDots += '<li>O</li>';
-		}
-	}
-
-	_configureAttDots(actorData) {
-		let attributes = duplicate(CONFIG.attributes);
-		actorData.attDots = {};
-
-		for (let a in attributes) {
-			actorData.attDots[a] = '';
-		}
-		for (let a in attributes) {
-			for (let i = 0; i < actorData.attributes[a].value; i++) {
-				actorData.attDots[a] += '<li>O</li>';
-			}
-		}
-	}
-
-	_configureSkillDots(actorData) {
-		let skills = duplicate(CONFIG.skills);
-		actorData.skillDots = {};
-
-		for (let s in skills) {
-			actorData.skillDots[s] = '';
-		}
-		for (let s in skills) {
-			for (let i = 0; i < actorData.skills[s].value; i++) {
-				actorData.skillDots[s] += '<li>O</li>';
-			}
-		}
-	}
-	*/
-
+	
 	/* -------------------------------------------- */
 
 	// Activate event listeners using the prepared sheet HTML

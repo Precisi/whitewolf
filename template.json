@@ -256,6 +256,13 @@
 						"max": 10,
 						"min": 0
 					},
+					"vampblood": {
+						"type": "Number",
+						"label": "Blood Pool",
+						"value": 1,
+						"max": 10,
+						"min": 0
+					},
 					"integ": {
 						"type": "Number",
 						"label": "Integrity",

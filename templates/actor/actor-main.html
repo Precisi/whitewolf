@@ -8,17 +8,17 @@
 	</select>
 </div>
 
-<div class="header-details">
-	<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
-	<div class="character-details">Mortal Age <input type="text" name="data.details.age.value" placeholder="Age" value="{{data.details.age.value}}"
+<div class="edit-details-grid">
+	<div class="edit-details">Character Name<input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></div>
+	<div class="edit-details">Mortal Age <input type="text" name="data.details.age.value" placeholder="Age" value="{{data.details.age.value}}"
 	data-dtype="Number" /></div>
-	<div class="character-details">Concept<input type="text" name="data.details.concept.value" placeholder="Concept" value="{{data.details.concept.value}}"
+	<div class="edit-details">Concept<input type="text" name="data.details.concept.value" placeholder="Concept" value="{{data.details.concept.value}}"
 	data-dtype="String" /></div>
-	<div class="character-details">Faction<input type="text" name="data.details.faction.value" placeholder="Faction" value="{{data.details.faction.value}}"
+	<div class="edit-details">Faction<input type="text" name="data.details.faction.value" placeholder="Faction" value="{{data.details.faction.value}}"
 	data-dtype="String" /></div>
-	<div class="character-details">Virtue<input type="text" name="data.details.anchor1.value" placeholder="Virtue" value="{{data.details.anchor1.value}}"
+	<div class="edit-details">Virtue<input type="text" name="data.details.anchor1.value" placeholder="Virtue" value="{{data.details.anchor1.value}}"
 	data-dtype="String" /></div>
-	<div class="character-details">Vice<input type="text" name="data.details.anchor2.value" placeholder="Vice" value="{{data.details.anchor2.value}}"
+	<div class="edit-details">Vice<input type="text" name="data.details.anchor2.value" placeholder="Vice" value="{{data.details.anchor2.value}}"
 	data-dtype="String" /></div>
 </div>
 
@@ -253,50 +253,41 @@
 </div>
 
 <h2>Skills</h2>
-
-<h2>Skills</h2>
-<div class="skill-section">
+<div class="edit-details">
+	<div class="skill-section">
 	<div class="skill-column">
 		<span class="skill-type">Mental (-3 unskilled)</span>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="academics">Academics</a></span>
-			<input type="number" name="data.skills.academics.value" value="{{data.skills.academics.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.academics.value" value="{{data.skills.academics.value}}" data-dtype="Number" />
 		</div>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="computer">Computer</a></span>
-			<input type="number" name="data.skills.computer.value" value="{{data.skills.computer.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.computer.value" value="{{data.skills.computer.value}}" data-dtype="Number" />
 		</div>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="crafts">Crafts</a></span>
-			<input type="number" name="data.skills.crafts.value" value="{{data.skills.crafts.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.crafts.value" value="{{data.skills.crafts.value}}" data-dtype="Number" />
 		</div>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="investigation">Investigation</a></span>
-			<input type="number" name="data.skills.investigation.value" value="{{data.skills.investigation.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.investigation.value" value="{{data.skills.investigation.value}}" data-dtype="Number" />
 		</div>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="medicine">Medicine</a></span>
-			<input type="number" name="data.skills.medicine.value" value="{{data.skills.medicine.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.medicine.value" value="{{data.skills.medicine.value}}" data-dtype="Number" />
 		</div>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="occult">Occult</a></span>
-			<input type="number" name="data.skills.occult.value" value="{{data.skills.occult.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.occult.value" value="{{data.skills.occult.value}}" data-dtype="Number" />
 		</div>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="politics">Politics</a></span>
-			<input type="number" name="data.skills.politics.value" value="{{data.skills.politics.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.politics.value" value="{{data.skills.politics.value}}" data-dtype="Number" />
 		</div>
 		<div class="skill">
 			<span><a class="roll-pool" data-skill="science">Science</a></span>
-			<input type="number" name="data.skills.science.value" value="{{data.skills.science.value}}"
-				data-dtype="Number" />
+			<input type="number" name="data.skills.science.value" value="{{data.skills.science.value}}" data-dtype="Number" />
 		</div>
 	</div>
 	<div class="skill-column">
@@ -384,6 +375,7 @@
 			<input type="number" name="data.skills.subterfuge.value" value="{{data.skills.subterfuge.value}}"
 				data-dtype="Number" />
 		</div>
+	</div>
 	</div>
 </div>
 

@@ -658,6 +658,10 @@ height: 67%
     z-index: 2;
     } 
 
+.vampire .attribute .attribute-dot {
+    color: #782e22;
+    }     
+
 .attribute-dot:nth-child(5n+6) {border-left: 1px solid #b7b7b7; margin-left: 1px; padding-left: 2px; width: 16px;}
 
 
@@ -949,3 +953,34 @@ height: 67%
 	height: 20px;
 	margin-top: 4px;
 }
+
+.edit-details-grid {
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-gap: 5px;
+	margin-top: 0px;
+}
+
+.edit-details {
+	width: 100%;
+}
+
+.edit-details .skill-section {
+	width: 100%;
+}
+
+.edit-details .skill-section .skill {
+	width: 40%;
+}
+
+.edit-details .skill-column {
+	display: block;
+	float: left;
+	height: 100%;
+	width: 33%;
+	margin-top: 8px;
+	padding: 3px;
+	font-size: 13px;
+	line-height: 13px;
+}
+

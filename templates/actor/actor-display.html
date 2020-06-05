@@ -388,67 +388,29 @@
 		<div class="display-willpower">
 			<h3>Other Traits</h3>
 			<h4>Willpower</h4>
-			<span
-				class="sheet-bubbles"
-				style="--percent: calc({{data.vamp-bg.willpower_max.value}} / 10 * 100%);"
-				>{{data.vamp-bg.willpower_max.value}}</span
-			>
-			<input
-				type="text"
-				name="data.vamp-bg.willpower_max.value"
-				value="{{data.vamp-bg.willpower_max.value}}"
-				data-dtype="Number"
-			/><br />
-			<span
-				class="sheet-squares"
-				style="--percent: calc({{data.vamp-bg.willpower_current.value}} / 10 * 100%);"
-				>{{data.vamp-bg.willpower_current.value}}</span
-			>
-			<input
-				type="text"
-				name="data.vamp-bg.willpower_current.value"
-				value="{{data.vamp-bg.willpower_current.value}}"
-				data-dtype="Number"
-			/>
-		</div>
+			<span class="sheet-bubbles" style="--percent: calc({{data.vamp-bg.willpower_max.value}} / 10 * 100%);">{{data.vamp-bg.willpower_max.value}}</span>
+			<input type="text" name="data.vamp-bg.willpower_max.value" value="{{data.vamp-bg.willpower_max.value}}"
+				data-dtype="Number" /><br />
+			<span class="sheet-squares" style="--percent: calc({{data.vamp-bg.willpower_current.value}} / 10 * 100%);">{{data.vamp-bg.willpower_current.value}}</span>
+			<input type="text" name="data.vamp-bg.willpower_current.value" value="{{data.vamp-bg.willpower_current.value}}" data-dtype="Number" />
+			</div>
+			
+			<div class="vamp_bloodpotency">
+				<h4>Blood Potency</h4>
+				<span><a class="roll-pool" data-skill="data.vamp-bg.blood_potency.value">Blood Potency</a></span>
+				<span class="sheet-bubbles"	style="--percent: calc({{data.vamp-bg.blood_potency.value}} / 10 * 100%);">{{data.vamp-bg.blood_potency.value}}</span>
+				<input type="text" name="data.vamp-bg.blood_potency.value" value="{{data.vamp-bg.blood_potency.value}}"
+					data-dtype="Number" />
+			</div>
+			<div style="clear: both;"></div>
+			
+			<div class="resource">
+				<label>Blood Pool</label>
 
-		<div class="vamp_bloodpotency">
-			<h4>Blood Potency</h4>
-			<span
-				><a class="roll-pool" data-skill="data.vamp-bg.blood_potency.value"
-					>Blood Potency</a
-				></span
-			>
-			<span
-				class="sheet-bubbles"
-				style="--percent: calc({{data.vamp-bg.blood_potency.value}} / 10 * 100%);"
-				>{{data.vamp-bg.blood_potency.value}}</span
-			>
-			<input
-				type="text"
-				name="data.vamp-bg.blood_potency.value"
-				value="{{data.vamp-bg.blood_potency.value}}"
-				data-dtype="Number"
-			/>
-		</div>
-		<div style="clear: both;"></div>
-
-		<div class="resource">
-			<label>Blood Pool</label>
-			<input
-				type="text"
-				name="data.power.value"
-				value="{{data.power.value}}"
-				data-dtype="Number"
-			/>
-			<span> / </span>
-			<input
-				type="text"
-				name="data.power.max"
-				value="{{data.power.max}}"
-				data-dtype="Number"
-			/>
-		</div>
+				<input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number" />
+				<span> / </span>
+				<input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number" />
+			</div>
 
 		<div class="display-other">
 			<div class="resource">
@@ -462,20 +424,10 @@
 					{{/each}}
 				</div>
 				<br />
-				<input
-					type="number"
-					name="data.advantages.hp.value"
-					value="{{data.advantages.hp.value}}"
-					data-dtype="Number"
-				/>
+				<input type="number" name="data.advantages.hp.value" value="{{data.advantages.hp.value}}" data-dtype="Number" />
 				<span> / </span>
-				<input
-					type="number"
-					name="data.advantages.hp.max"
-					value="{{data.advantages.hp.max}}"
-					data-dtype="Number"
-				/>
-			</div>
+				<input type="number" name="data.advantages.hp.max" value="{{data.advantages.hp.max}}" data-dtype="Number" />
+				</div>
 
 			<div class="resource">
 				<h3>Willpower</h3>
@@ -486,19 +438,9 @@
 				<span>⚫</span>
 				{{/each}}
 				<br />
-				<input
-					type="number"
-					name="data.advantages.wp.value"
-					value="{{data.advantages.wp.value}}"
-					data-dtype="Number"
-				/>
+				<input type="number" name="data.advantages.wp.value" value="{{data.advantages.wp.value}}" data-dtype="Number" />
 				<span> / </span>
-				<input
-					type="number"
-					name="data.advantages.wp.max"
-					value="{{data.advantages.wp.max}}"
-					data-dtype="Number"
-				/>
+				<input type="number" name="data.advantages.wp.max" value="{{data.advantages.wp.max}}" data-dtype="Number" />
 			</div>
 
 			<div class="resource">
