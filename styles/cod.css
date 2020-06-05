@@ -804,6 +804,8 @@ height: 67%
 	text-transform: uppercase;
 }
 
+.display-willpower input {width: 30px;}
+
 .cod.sheet .display-disciplines .items-list .item,
 .cod.sheet .display-merits .items-list .item {
 	height: 22px;
@@ -844,14 +846,14 @@ height: 67%
 	width: 100px;
 }
 
+.vampire .display-other { display: none;}
+
+
 /* --------------- Sheet Bubbles --------------- */
 /* ●●●●●●●●●●●●●●● Sheet Bubbles ●●●●●●●●●●●●●●● */
 /* --------------- Sheet Bubbles --------------- */
 
-.attribute-bubbles {
-	font-size: 20px;
-	color: #191813;
-}
+
 
 .sheet-bubbles,
 .skill-bubbles,
