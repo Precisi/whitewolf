@@ -417,13 +417,17 @@
 				<h3>Health</h3>
 				<div class="resource">
 					{{#repeat actor.data.advantages.hp.max}}
-						{{#ifLessThan @index ../actor.data.status.damage.aggravated.value}}
+						{{#ifGreaterThan ../actor.data.status.damage.aggravated.value @index}}
 							<span>{{../damageTypes.aggravated.symbol}}</span>
 						{{else}}
-							{{#ifLessThan @index ../actor.data.status.damage.lethal.value}}
+							{{#ifGreaterThan 
+								(math ../actor.data.status.damage.aggravated.value "+" ../actor.data.status.damage.lethal.value) @index}}
 								<span>{{../damageTypes.lethal.symbol}}</span>
 							{{else}}
-								{{#ifLessThan @index ../actor.data.status.damage.bashing.value}}
+								{{#ifGreaterThan 
+									(math ../actor.data.status.damage.aggravated.value "+" 
+										(math ../actor.data.status.damage.lethal.value "+" ../actor.data.status.damage.bashing.value)
+									) @index}}
 									<span>{{../damageTypes.bashing.symbol}}</span>
 								{{else}}
 									{{#ifLessThan @index ../actor.data.advantages.hp.value}}
@@ -431,9 +435,9 @@
 									{{else}}
 										<span>⚫</span>
 									{{/ifLessThan}}
-								{{/ifLessThan}}
-							{{/ifLessThan}}
-						{{/ifLessThan}}
+								{{/ifGreaterThan}}
+							{{/ifGreaterThan}}
+						{{/ifGreaterThan}}
 					{{/repeat}}
 				</div>
 				<br />

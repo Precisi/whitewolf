@@ -61,6 +61,22 @@ Hooks.once('init', async function () {
 	Handlebars.registerHelper('ifLessThan', (x, y, options) => {
 		return (x < y) ? options.fn() : options.inverse();
 	});
+	Handlebars.registerHelper('ifGreaterThan', (x, y, options) => {
+		return (x > y) ? options.fn() : options.inverse();
+	});
+	// Thank you http://jsfiddle.net/mpetrovich/wMmHS/
+	Handlebars.registerHelper('math', function(lvalue, operator, rvalue, options) {
+		lvalue = parseFloat(lvalue);
+		rvalue = parseFloat(rvalue);
+			
+		return {
+			"+": lvalue + rvalue,
+			"-": lvalue - rvalue,
+			"*": lvalue * rvalue,
+			"/": lvalue / rvalue,
+			"%": lvalue % rvalue
+		}[operator];
+	});
 });
 
 Hooks.once('ready', async function () {

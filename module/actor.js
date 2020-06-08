@@ -71,8 +71,8 @@ export class ActorCoD extends Actor {
 		}
 
 		// Default damage type values to 0, so math is happy
-		for (let d in data.conditions.damage) {
-			if (data.conditions.damage[d].value === null) data.conditions.damage[d] = data.conditions.damage[d].min;
+		for (let d in data.status.damage) {
+			if (data.status.damage[d].value === null) data.status.damage[d] = data.status.damage[d].min;
 		}
 
 		// Ensure others are valid
