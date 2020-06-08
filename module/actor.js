@@ -70,6 +70,11 @@ export class ActorCoD extends Actor {
 				data.skills[s].value = data.skills[s].min;
 		}
 
+		// Default damage type values to 0, so math is happy
+		for (let d in data.conditions.damage) {
+			if (data.conditions.damage[d].value === null) data.conditions.damage[d] = data.conditions.damage[d].min;
+		}
+
 		// Ensure others are valid
 		if (size.value < size.min) size.value = size.min;
 		if (garmor.value < garmor.min) garmor.value = garmor.min;

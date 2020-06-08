@@ -31,6 +31,9 @@ export class ActorSheetCoD extends ActorSheet {
 		// Provide splat info to sheet
 		data.splats = CONFIG.splats;
 
+		// Use configured damage icons
+		data.damageTypes = CONFIG.damageTypes;
+
 		// Prep tabs
 		data.tabs = {
 			display: {

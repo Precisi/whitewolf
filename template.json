@@ -458,13 +458,34 @@
 						},
 						"condition2": {
 							"type": "String",
-							"label": "Condition 1",
+							"label": "Condition 2",
 							"value": ""
 						},
 						"condition3": {
 							"type": "String",
-							"label": "Condition 1",
+							"label": "Condition 3",
 							"value": ""
+						}
+					},
+
+					"damage": {
+						"aggravated": {
+							"type": "String",
+							"label": "Aggravated",
+							"value": 0,
+							"min": 0
+						},
+						"lethal": {
+							"type": "String",
+							"label": "Lethal",
+							"value": 0,
+							"min": 0
+						},
+						"bashing": {
+							"type": "String",
+							"label": "Bashing",
+							"value": 0,
+							"min": 0
 						}
 					}
 				},

@@ -231,6 +231,25 @@ CONFIG.attackSkills = {
 	meleeFinesse: 'dex,weaponry',
 };
 
+// Damage Types
+CONFIG.damageTypes = {
+	aggravated: {
+		symbol: '🔥',
+		text: '*',
+		label: 'Aggravated',
+	},
+	lethal: {
+		symbol: '🔪',
+		text: 'X',
+		label: 'Lethal',
+	},
+	bashing: {
+		symbol: '🩹',
+		text: '/',
+		label: 'Bashing'
+	},
+};
+
 // Character Types
 CONFIG.splats = {
 	mortal: 'Mortal',

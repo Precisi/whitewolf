@@ -417,14 +417,38 @@
 				<h3>Health</h3>
 				<div class="resource">
 					{{#repeat actor.data.advantages.hp.max}}
-						{{#ifLessThan @index ../actor.data.advantages.hp.value}}<span>🔴</span>{{else}}<span>⚫</span>{{/ifLessThan}}
+						{{#ifLessThan @index ../actor.data.status.damage.aggravated.value}}
+							<span>{{../damageTypes.aggravated.symbol}}</span>
+						{{else}}
+							{{#ifLessThan @index ../actor.data.status.damage.lethal.value}}
+								<span>{{../damageTypes.lethal.symbol}}</span>
+							{{else}}
+								{{#ifLessThan @index ../actor.data.status.damage.bashing.value}}
+									<span>{{../damageTypes.bashing.symbol}}</span>
+								{{else}}
+									{{#ifLessThan @index ../actor.data.advantages.hp.value}}
+										<span>🔴</span>
+									{{else}}
+										<span>⚫</span>
+									{{/ifLessThan}}
+								{{/ifLessThan}}
+							{{/ifLessThan}}
+						{{/ifLessThan}}
 					{{/repeat}}
 				</div>
 				<br />
 				<input type="number" name="data.advantages.hp.value" value="{{data.advantages.hp.value}}" data-dtype="Number" />
 				<span> / </span>
 				<input type="number" name="data.advantages.hp.max" value="{{data.advantages.hp.max}}" data-dtype="Number" />
+				<div class="tiny-inputs">
+					<span>{{damageTypes.aggravated.label}}</span>
+					<input type="number" name="data.status.damage.aggravated.value" value="{{data.status.damage.aggravated.value}}" data-dtype="Number" />
+					<span>{{damageTypes.lethal.label}}</span>
+					<input type="number" name="data.status.damage.lethal.value" value="{{data.status.damage.lethal.value}}" data-dtype="Number" />
+					<span>{{damageTypes.bashing.label}}</span>
+					<input type="number" name="data.status.damage.bashing.value" value="{{data.status.damage.bashing.value}}" data-dtype="Number" />
 				</div>
+			</div>
 
 			<div class="resource">
 				<h3>Willpower</h3>
