@@ -846,6 +846,10 @@ height: 67%
 	width: 100px;
 }
 
+.tiny-inputs input {
+	width: 10%;
+}
+
 .vampire .display-other { display: none;}
 
 

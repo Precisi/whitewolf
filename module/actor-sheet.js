@@ -28,11 +28,11 @@ export class ActorSheetCoD extends ActorSheet {
 		data.attributes = this.sortAttrGroups();
 		data.skills = this.sortSkillGroups();
 
-		// Prepare health, willpower, attribute, and skill dots
-		this._configureDots(data.actor.data);
-
 		// Provide splat info to sheet
 		data.splats = CONFIG.splats;
+
+		// Use configured damage icons
+		data.damageTypes = CONFIG.damageTypes;
 
 		// Prep tabs
 		data.tabs = {
@@ -209,87 +209,7 @@ export class ActorSheetCoD extends ActorSheet {
 		return displaySkillGroups;
 	}
 
-	// Create HP/WP/Att/Skill dot objects
-	_configureDots(actorData) {
-		let attributes = duplicate(CONFIG.attributes);
-		let skills = duplicate(CONFIG.skills);
-
-		actorData.dots = {
-			hpMaxDots: [],
-			hpCurrentDots: [],
-			wpMaxDots: [],
-			wpCurrentDots: [],
-			integDots: [],
-			attDots: [],
-			skillDots: [],
-		};
-
-		// Configure HP max dots
-		for (let i = 0; i < actorData.advantages.hp.max; i++) {
-			actorData.dots.hpMaxDots.push({
-				full: true,
-			});
-		}
-
-		// Configure HP current dots
-		for (let i = 0; i < actorData.advantages.hp.value; i++) {
-			actorData.dots.hpCurrentDots.push({
-				full: true,
-			});
-		}
-
-		// Configure WP max dots
-		for (let i = 0; i < actorData.advantages.wp.max; i++) {
-			actorData.dots.wpMaxDots.push({
-				full: true,
-			});
-		}
-
-		// Configure WP current dots
-		for (let i = 0; i < actorData.advantages.wp.value; i++) {
-			actorData.dots.wpCurrentDots.push({
-				full: true,
-			});
-		}
-
-		// Configure Integrity current dots
-		for (let i = 0; i < actorData.advantages.integ.value; i++) {
-			actorData.dots.integDots.push({
-				full: true,
-			});
-		}
-
-		// Configure Attribute dots
-		for (let a in attributes) {
-			actorData.dots.attDots[a] = [];
-		}
-		for (let a in attributes) {
-			for (let i = 0; i < actorData.attributes[a].value; i++) {
-				actorData.dots.attDots[a].push({
-					full: true,
-				});
-			}
-		}
-
-		// Configure Skill dots
-		for (let s in skills) {
-			actorData.dots.skillDots[s] = [];
-		}
-
-		for (let s in skills) {
-			for (let i = 0; i < actorData.skills[s].value; i++) {
-				actorData.dots.skillDots[s].push({
-					full: true,
-				});
-			}
-		}
-	}
-
-	
-	/* -------------------------------------------- */
-
 	// Activate event listeners using the prepared sheet HTML
-
 	activateListeners(html) {
 		super.activateListeners(html);
 
