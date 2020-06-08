@@ -470,19 +470,19 @@
 
 					"damage": {
 						"aggravated": {
-							"type": "String",
+							"type": "Number",
 							"label": "Aggravated",
 							"value": 0,
 							"min": 0
 						},
 						"lethal": {
-							"type": "String",
+							"type": "Number",
 							"label": "Lethal",
 							"value": 0,
 							"min": 0
 						},
 						"bashing": {
-							"type": "String",
+							"type": "Number",
 							"label": "Bashing",
 							"value": 0,
 							"min": 0
