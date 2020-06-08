@@ -14,7 +14,7 @@
 						<div class="attribute-label"><a class="roll-pool" data-skill="int">Intelligence</a></div>
 						<div class="attribute-max-bubbles"></div>
 						<div class="attribute-bubbles">
-						{{#each actor.data.dots.attDots.int as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+						{{#repeat actor.data.attributes.int.value}}<div class="attribute-dot">●</div>{{/repeat}}
 						</div>
 						<div style="clear: both;"></div>
 			</div>
@@ -23,7 +23,7 @@
 					<div class="attribute-label"><a class="roll-pool" data-skill="wits">Wits</a></div>
 					<div class="attribute-max-bubbles"></div>
 					<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.wits as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+					{{#repeat actor.data.attributes.wits.value}}<div class="attribute-dot">●</div>{{/repeat}}
 					</div>
 					<div style="clear: both;"></div>
 			</div>
@@ -32,7 +32,7 @@
 					<div class="attribute-label"><a class="roll-pool" data-skill="res">Resolve</a></div>
 					<div class="attribute-max-bubbles"></div>
 					<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.res as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+					{{#repeat actor.data.attributes.res.value}}<div class="attribute-dot">●</div>{{/repeat}}
 					</div>
 					<div style="clear: both;"></div>
 			</div>
@@ -45,7 +45,7 @@
 					<div class="attribute-label"><a class="roll-pool" data-skill="str">Strength</a></div>
 					<div class="attribute-max-bubbles"></div>
 					<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.str as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+					{{#repeat actor.data.attributes.str.value}}<div class="attribute-dot">●</div>{{/repeat}}
 					</div>
 					<div style="clear: both;"></div>
 			</div>
@@ -54,7 +54,7 @@
 				<div class="attribute-label"><a class="roll-pool" data-skill="dex">Dexterity</a></div>
 				<div class="attribute-max-bubbles"></div>
 				<div class="attribute-bubbles">
-				{{#each actor.data.dots.attDots.dex as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				{{#repeat actor.data.attributes.dex.value}}<div class="attribute-dot">●</div>{{/repeat}}
 				</div>
 				<div style="clear: both;"></div>
 			</div>
@@ -63,7 +63,7 @@
 				<div class="attribute-label"><a class="roll-pool" data-skill="sta">Stamina</a></div>
 				<div class="attribute-max-bubbles"></div>
 				<div class="attribute-bubbles">
-				{{#each actor.data.dots.attDots.sta as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				{{#repeat actor.data.attributes.sta.value}}<div class="attribute-dot">●</div>{{/repeat}}
 				</div>
 			<div style="clear: both;"></div>
 			</div>
@@ -76,7 +76,7 @@
 				<div class="attribute-label"><a class="roll-pool" data-skill="pre">Presence</a></div>
 				<div class="attribute-max-bubbles"></div>
 				<div class="attribute-bubbles">
-				{{#each actor.data.dots.attDots.pre as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				{{#repeat actor.data.attributes.pre.value}}<div class="attribute-dot">●</div>{{/repeat}}
 				</div>
 				<div style="clear: both;"></div>
 			</div>
@@ -85,7 +85,7 @@
 				<div class="attribute-label"><a class="roll-pool" data-skill="man">Manipulation</a></div>
 				<div class="attribute-max-bubbles"></div>
 				<div class="attribute-bubbles">
-				{{#each actor.data.dots.attDots.man as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				{{#repeat actor.data.attributes.man.value}}<div class="attribute-dot">●</div>{{/repeat}}
 				</div>
 				<div style="clear: both;"></div>
 			</div>
@@ -94,7 +94,7 @@
 				<div class="attribute-label"><a class="roll-pool" data-skill="com">Composure</a></div>
 				<div class="attribute-max-bubbles"></div>
 				<div class="attribute-bubbles">
-				{{#each actor.data.dots.attDots.com as |item id|}}<div class="attribute-dot">●</div>{{/each}}
+				{{#repeat actor.data.attributes.com.value}}<div class="attribute-dot">●</div>{{/repeat}}
 				</div>
 				<div style="clear: both;"></div>
 			</div>
@@ -404,7 +404,7 @@
 				<h3>Blood Pool</h3>
 				<div class="resource">
 					{{#repeat data.power.max}}
-					{{#ifLessThan @index ../data.power.value}}<span>🔴</span>{{else}}<span>⚫</span>{{/ifLessThan}}
+						{{#ifLessThan @index ../data.power.value}}<span>🟥</span>{{else}}<span>⬛</span>{{/ifLessThan}}
 					{{/repeat}}
 				</div>
 				<input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number" />
@@ -416,12 +416,9 @@
 			<div class="resource">
 				<h3>Health</h3>
 				<div class="resource">
-					{{#each actor.data.dots.hpCurrentDots as |item id|}}
-					<span>⚫</span>
-					{{/each}}<br />
-					{{#each actor.data.dots.hpMaxDots as |item id|}}
-					<span>⚫</span>
-					{{/each}}
+					{{#repeat actor.data.advantages.hp.max}}
+						{{#ifLessThan @index ../actor.data.advantages.hp.value}}<span>🔴</span>{{else}}<span>⚫</span>{{/ifLessThan}}
+					{{/repeat}}
 				</div>
 				<br />
 				<input type="number" name="data.advantages.hp.value" value="{{data.advantages.hp.value}}" data-dtype="Number" />
@@ -431,12 +428,9 @@
 
 			<div class="resource">
 				<h3>Willpower</h3>
-				{{#each actor.data.dots.wpCurrentDots as |item id|}}
-				<span>⚫</span>
-				{{/each}}<br />
-				{{#each actor.data.dots.wpMaxDots as |item id|}}
-				<span>⚫</span>
-				{{/each}}
+					{{#repeat actor.data.advantages.wp.max}}
+						{{#ifLessThan @index ../actor.data.advantages.wp.value}}<span>🟣</span>{{else}}<span>⚫</span>{{/ifLessThan}}
+					{{/repeat}}
 				<br />
 				<input type="number" name="data.advantages.wp.value" value="{{data.advantages.wp.value}}" data-dtype="Number" />
 				<span> / </span>
@@ -445,9 +439,10 @@
 
 			<div class="resource">
 				<h3>Integrity</h3>
-				{{#each actor.data.dots.integDots as |item id|}}
-				<span>⚫</span>
-				{{/each}}<br />
+					{{#repeat actor.data.advantages.integ.max}}
+						{{#ifLessThan @index ../actor.data.advantages.integ.value}}<span>🔵</span>{{else}}<span>⚫</span>{{/ifLessThan}}
+					{{/repeat}}
+				<br />
 				<br />
 				<input
 					type="number"

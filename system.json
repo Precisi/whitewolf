@@ -4,7 +4,7 @@
 	"description": "A Whitewolf System for sheets and some functionality for rolling.",
 	"version": "0.45",
 	"minimumCoreVersion": "0.6.0",
-	"compatibleCoreVersion": "0.6.0",
+	"compatibleCoreVersion": "0.6.2",
 	"templateVersion": 2,
 	"author": "Burning, Moo Man, Burzghash, Precisi, Ashenfalke",
 	"esmodules": ["module/cod.js"],
