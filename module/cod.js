@@ -250,18 +250,18 @@ CONFIG.attackSkills = {
 // Damage Types
 CONFIG.damageTypes = {
 	aggravated: {
-		symbol: '🔥',
-		text: '*',
+		symbol: '💥',
+		text: '¤',
 		label: 'Aggravated',
 	},
 	lethal: {
-		symbol: '🔪',
-		text: 'X',
+		symbol: '❌',
+		text: '×',
 		label: 'Lethal',
 	},
 	bashing: {
-		symbol: '🩹',
-		text: '/',
+		symbol: '⭕',
+		text: '-',
 		label: 'Bashing'
 	},
 };
